@@ -1,30 +1,22 @@
 # gopassgen
 
-**gopassgen** は、Goで実装されたシンプルなコマンドライン用パスワード生成ツールです。  
-指定したオプションに応じて、安全でカスタマイズ可能なパスワードを生成できます。
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/<your-username>/gopassgen)](https://goreportcard.com/report/github.com/<your-username>/gopassgen)
 
-## 🔧 特徴
+**gopassgen** は、Goで作られたシンプルかつ安全なパスワード生成ツールです。
 
-- パスワードの長さを指定可能
-- 数字・記号・大文字・小文字を含めるか選択可能
-- 複数のパスワードを一度に生成
-- CLIツールとして簡単に使用可能
+## 📦 概要
 
-## 🚀 使い方（Usage）
+長さや構成（数字・記号・大文字など）を細かく指定して、複数のパスワードを一括生成できます。CLI上で簡単に実行でき、スクリプトやパイプ処理にも組み込みやすい設計を意識しています。
 
-```bash
-# 長さ16文字、数字と記号を含むパスワードを生成
-gopassgen --length 16 --digits --symbols
-
-# 長さ20文字のパスワードを5つ生成
-gopassgen --length 20 --count 5
-
-
-## 🚀 Usage
+## 🧪 使用例（Usage）
 
 ```bash
-# Generate a 16-character password with digits and symbols
+# デフォルト（長さ12のパスワードを1つ）
+gopassgen
+
+# 長さ16、数字と記号を含む
 gopassgen --length 16 --digits --symbols
 
-# Generate 5 random passwords, 20 characters long
+# 5つのパスワードを一括生成
 gopassgen --length 20 --count 5
