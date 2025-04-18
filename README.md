@@ -2,6 +2,8 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/<your-username>/gopassgen)](https://goreportcard.com/report/github.com/<your-username>/gopassgen)
+https://img.shields.io/badge/:badgeContent?style=flat&logo=MIT&logoColor=blue&label=license
+
 
 **gopassgen** は、Goで作られたシンプルかつ安全なパスワード生成ツールです。
 
