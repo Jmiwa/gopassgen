@@ -1,5 +1,5 @@
 @default: help
-App := 'WildCherry'
+App := 'gopassgen'
 Version := `grep '^const VERSION = ' cmd/main/version.go | sed "s/^VERSION = ¥"¥(.*¥)¥"/¥1/g"`
 # show help message
 @help:
