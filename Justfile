@@ -2,7 +2,7 @@
 @default: help
 
 App := 'gopassgen'
-Version := `grep '^const VERSION = ' cmd/main/version.go | sed "s/^VERSION = \"\(.*\)\"/\1/g"`
+Version := `grep '^const VERSION = ' cmd/version.go | sed "s/^VERSION = \"\(.*\)\"/\1/g"`
 
 # show help message
 @help:
@@ -13,7 +13,7 @@ Version := `grep '^const VERSION = ' cmd/main/version.go | sed "s/^VERSION = \"\
 
 # build the application with running tests
 build: test
-    go build -o wildcherry cmd/main/main.go
+    go build -o gopassgen cmd/main.go
 
 # run tests and generate the coverage report
 test:
