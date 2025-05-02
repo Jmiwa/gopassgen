@@ -2,6 +2,9 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/Jmiwa/gopassgen)](https://goreportcard.com/report/github.com/Jmiwa/gopassgen)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15324155.svg)](https://doi.org/10.5281/zenodo.15324155)
+
+
 
 
 
