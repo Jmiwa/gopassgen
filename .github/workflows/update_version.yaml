@@ -1,0 +1,49 @@
+name: Update Version
+
+on:
+  push:
+    branches:
+      - 'releases/v*'
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Extract branch and tag
+        id: vars
+        run: |
+          branch="${GITHUB_REF#refs/heads/}"
+          tag="${branch##*/v}"
+          echo "branch=$branch" >> $GITHUB_OUTPUT
+          echo "tag=$tag"       >> $GITHUB_OUTPUT
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref:         ${{ steps.vars.outputs.branch }}
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --global user.name  "GitHub Actions"
+          git config --global user.email "action@github.com"
+
+      - name: Initialize submodules
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" \
+              -c protocol.version=2 \
+            submodule update --init --force --recursive --depth=1
+
+      - name: Update version
+        run: |
+          just update_version ${{ steps.vars.outputs.tag }}
+          git commit -a -m "chore: bump version to v${{ steps.vars.outputs.tag }}" || echo "No changes to commit"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch:       ${{ steps.vars.outputs.branch }}
