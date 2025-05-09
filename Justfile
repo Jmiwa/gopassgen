@@ -13,7 +13,7 @@ Version := `grep '^const VERSION = ' cmd/version.go | sed "s/^VERSION = \"\(.*\)
 
 # build the application with running tests
 build: test
-    go build -o gopassgen cmd/main.go
+    go build -o gopassgen cmd/gopassgen/main.go
 
 # run tests and generate the coverage report
 test:
