@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "gopassgen/internal/generator"
+    "github.com/Jmiwa/gopassgen/internal/generator"
 )
 
 func main() {
