@@ -1,11 +1,15 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "gopassgen/internal/generator"
+)
 
 func main() {
-	fmt.Println(hello())
+    password, err := generator.Generate(12)
+    if err != nil {
+        panic(err)
+    }
+    fmt.Println(password)
 }
 
-func hello() string {
-	return "Hello, World!"
-}
