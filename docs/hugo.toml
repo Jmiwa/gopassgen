@@ -1,0 +1,7 @@
+baseURL = 'https://Jmiwa.github.io/gopassgen/'
+languageCode = 'en-us'
+title = 'gopassgen documentation'
+theme = "beautifulhugo"
+
+
+
