@@ -24,6 +24,11 @@ jobs:
           ref:         ${{ steps.vars.outputs.branch }}
           fetch-depth: 0
 
+      - name: Setup Just
+        uses: extractions/setup-just@v3
+        with:
+          just-version: '1.40.0'
+
       - name: Configure Git
         run: |
           git config --global user.name  "GitHub Actions"
