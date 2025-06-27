@@ -19,7 +19,8 @@ jobs:
       - name: Git Tag name
         id: vars
         run: |
-          echo "tag=${GITHUB_HEAD_REF##*/v}" >> $GITHUB_OUTPUT
+          TAG_NAME="${{ github.event.pull_request.head.ref }}"
+          echo "tag=${TAG_NAME##*/v}" >> $GITHUB_OUTPUT
 
       - name: Create release
         id: create_release
