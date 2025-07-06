@@ -5,6 +5,8 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15324155.svg)](https://doi.org/10.5281/zenodo.15324155)
 [![Coverage Status](https://coveralls.io/repos/github/Jmiwa/gopassgen/badge.svg?branch=main)](https://coveralls.io/github/Jmiwa/gopassgen?branch=main)
 [![build](https://github.com/Jmiwa/gopassgen/actions/workflows/build.yaml/badge.svg)](https://github.com/Jmiwa/gopassgen/actions/workflows/build.yaml)
+![Version](https://img.shields.io/badge/version-1.0.2-blue)
+
 
 
 

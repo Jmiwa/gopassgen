@@ -25,4 +25,7 @@ go.work.sum
 .env
 
 # gopassgen
-/gopassgen
+/gopassgen.DS_Store
+homebrew-tap/
+gopassgen-*.tar.gz
+gopassgen-*-darwin-arm64
