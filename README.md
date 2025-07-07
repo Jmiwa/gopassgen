@@ -118,13 +118,4 @@ just test
 
 ---
 
-## 🙋‍♂️ 作者
 
-Jurin Miwa  
-[GitHub: @Jmiwa](https://github.com/Jmiwa)
-
----
-
-## 💡 貢献
-
-バグ報告・提案・PR 大歓迎です！Issue か Pull Request をお送りください。
