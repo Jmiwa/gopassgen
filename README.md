@@ -100,19 +100,6 @@ just build
 just test
 ```
 
-#### カバレッジ表示
-
-```bash
-just coverage
-```
-
-または手動で以下を実行：
-
-```bash
-go test -covermode=count -coverprofile=coverage.out ./...
-go tool cover -html=coverage.out
-```
-
 ## 📁 ディレクトリ構成
 
 ```
