@@ -30,5 +30,5 @@ homebrew-tap/
 gopassgen-*.tar.gz
 gopassgen-*-darwin-arm64
 
-# macOS system file
-.DS_Store
+# macOS system file.DS_Store
+docs/public/
